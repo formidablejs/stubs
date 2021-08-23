@@ -1,0 +1,4 @@
+export default class {{class}}
+
+	def handle request, reply, params
+		request

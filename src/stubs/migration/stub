@@ -1,0 +1,23 @@
+const { schema } = require('@formidablejs/schema-builder');
+
+exports.up = (db) => {
+	return db.createTable('{{table}}', schema([
+
+	]));
+};
+
+exports.down = (db) => {
+	return db.dropTable('{{table}}');
+};
+
+let dbm, type, seed;
+
+exports.setup = (options, seedLink) => {
+	dbm = options.dbmigrate;
+	type = dbm.dataType;
+	seed = seedLink;
+};
+
+exports._meta = {
+	version: 1
+};

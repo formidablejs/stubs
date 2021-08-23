@@ -1,0 +1,11 @@
+import { FormRequest } from '@formidablejs/framework'
+
+export default class {{class}} < FormRequest
+
+	def authorize
+		false
+
+	def rules
+		{
+
+		}

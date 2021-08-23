@@ -1,0 +1,10 @@
+import { Model } from '@formidablejs/persona'
+
+export default class {{class}} < Model
+
+	# The attributes that should be hidden.
+	#
+	# @type {string[]}
+
+	get hidden
+		[]

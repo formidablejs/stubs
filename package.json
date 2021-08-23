@@ -1,0 +1,15 @@
+{
+	"name": "@formidablejs/stubs",
+	"version": "0.0.1-rc1",
+	"description": "Framework stubs",
+	"main": "src/index.js",
+	"types": "types/index.d.ts",
+	"scripts": {
+		"build": "tsc"
+	},
+	"author": "Donald Pakkies",
+	"license": "MIT",
+	"dependencies": {
+		"typescript": "^4.3.5"
+	}
+}

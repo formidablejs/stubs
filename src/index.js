@@ -1,0 +1,1 @@
+exports.Stub = require('./Stub');
