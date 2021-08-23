@@ -2,14 +2,14 @@ export = Stub;
 declare class Stub {
     /**
      * @param {string} name
-     * @param {Object} options
+     * @param {object} options
      * @param {string} stubName
      */
-    constructor(name: string, options: any, stubName: string);
+    constructor(name: string, options: object, stubName: string);
     /**
      * Stub properties.
      *
-     * @returns {Object}
+     * @return {object}
      */
     get props(): any;
     className: string;
@@ -20,49 +20,49 @@ declare class Stub {
     /**
      * Stub data.
      *
-     * @returns {Object}
+     * @return {object}
      */
     get data(): any;
     /**
      * Stub contents.
      *
-     * @returns {string}
+     * @return {string}
      */
     get contents(): string;
     /**
      * File destination.
      *
-     * @returns {string}
+     * @return {string}
      */
     get destination(): string;
     /**
      * File name from class name.
      *
-     * @returns {string}
+     * @return {string}
      */
     get fileName(): string;
     /**
      * Real path.
      *
-     * @returns {string}
+     * @return {string}
      */
     get realPath(): string;
     /**
      * Class/file namespace.
      *
-     * @returns {string}
+     * @return {string}
      */
     get namespace(): string;
     /**
      * Class name without the namespace.
      *
-     * @returns {string}
+     * @return {string}
      */
     get realClassName(): string;
     /**
      * Get make information.
      *
-     * @returns {Object}
+     * @return {object}
      */
-    make(): any;
+    make(): object;
 }

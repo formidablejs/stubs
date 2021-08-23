@@ -5,7 +5,7 @@ module.exports = class Stub {
 	/**
 	 * Stub properties.
 	 *
-	 * @returns {Object}
+	 * @returns {object}
 	 */
 	get props() {
 		return { };
@@ -13,7 +13,7 @@ module.exports = class Stub {
 
 	/**
 	 * @param {string} name
-	 * @param {Object} options
+	 * @param {object} options
 	 * @param {string} stubName
 	 */
 	constructor(name, options, stubName) {
@@ -47,7 +47,7 @@ module.exports = class Stub {
 	/**
 	 * Stub data.
 	 *
-	 * @returns {Object}
+	 * @returns {object}
 	 */
 	get data() {
 		return {
@@ -139,7 +139,7 @@ module.exports = class Stub {
 	/**
 	 * Get make information.
 	 *
-	 * @returns {Object}
+	 * @return {object}
 	 */
 	make() {
 		return {
