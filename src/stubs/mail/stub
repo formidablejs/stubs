@@ -1,0 +1,11 @@
+import { Mailable } from '@formidablejs/framework'
+
+export default class {{class}} < Mailable
+
+	prop subject\String
+
+	def constructor
+		super!
+
+	def render
+		<p> "Hello World"
