@@ -9,7 +9,7 @@
 	},
 	"author": "Donald Pakkies",
 	"license": "MIT",
-	"dependencies": {
+	"devDependencies": {
 		"typescript": "^4.3.5"
 	}
 }
