@@ -6,9 +6,7 @@ exports.up = (db) => {
 	]));
 };
 
-exports.down = (db) => {
-	return db.dropTable('{{table}}');
-};
+exports.down = (db) => db.dropTable('{{table}}');
 
 let dbm, type, seed;
 
