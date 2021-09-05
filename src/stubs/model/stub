@@ -1,4 +1,4 @@
-import { Model } from '@formidablejs/persona'
+import { Model } from '@formidablejs/framework'
 
 export default class {{class}} < Model
 
