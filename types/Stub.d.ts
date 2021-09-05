@@ -9,7 +9,7 @@ declare class Stub {
     /**
      * Stub properties.
      *
-     * @return {object}
+     * @returns {object}
      */
     get props(): any;
     className: string;
@@ -20,43 +20,43 @@ declare class Stub {
     /**
      * Stub data.
      *
-     * @return {object}
+     * @returns {object}
      */
     get data(): any;
     /**
      * Stub contents.
      *
-     * @return {string}
+     * @returns {string}
      */
     get contents(): string;
     /**
      * File destination.
      *
-     * @return {string}
+     * @returns {string}
      */
     get destination(): string;
     /**
      * File name from class name.
      *
-     * @return {string}
+     * @returns {string}
      */
     get fileName(): string;
     /**
      * Real path.
      *
-     * @return {string}
+     * @returns {string}
      */
     get realPath(): string;
     /**
      * Class/file namespace.
      *
-     * @return {string}
+     * @returns {string}
      */
     get namespace(): string;
     /**
      * Class name without the namespace.
      *
-     * @return {string}
+     * @returns {string}
      */
     get realClassName(): string;
     /**
