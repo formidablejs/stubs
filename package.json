@@ -1,6 +1,6 @@
 {
 	"name": "@formidablejs/stubs",
-	"version": "0.0.1-rc2",
+	"version": "0.1.0-alpha.1",
 	"description": "Formidable Framework stubs for Craftsman",
 	"main": "src/index.js",
 	"types": "types/index.d.ts",
@@ -11,5 +11,8 @@
 	"license": "MIT",
 	"devDependencies": {
 		"typescript": "^4.3.5"
+	},
+	"dependencies": {
+		"pluralize": "^8.0.0"
 	}
 }
