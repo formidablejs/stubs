@@ -1,15 +1,18 @@
 {
 	"name": "@formidablejs/stubs",
-	"version": "0.0.1-rc1",
+	"version": "0.1.0-alpha.1",
 	"description": "Formidable Framework stubs for Craftsman",
 	"main": "src/index.js",
 	"types": "types/index.d.ts",
 	"scripts": {
 		"build": "tsc"
 	},
-	"author": "Donald Pakkies",
+	"author": "Donald Pakkies <donaldpakkies@gmail.com>",
 	"license": "MIT",
 	"devDependencies": {
 		"typescript": "^4.3.5"
+	},
+	"dependencies": {
+		"pluralize": "^8.0.0"
 	}
 }
