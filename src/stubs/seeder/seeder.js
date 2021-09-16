@@ -34,7 +34,7 @@ const parseDate = (date) => {
 	].join('');
 }
 
-module.exports = class Migration extends Stub {
+module.exports = class Seeder extends Stub {
 	/**
 	 * @inheritdoc
 	 */
@@ -60,7 +60,7 @@ module.exports = class Migration extends Stub {
 	 * @inheritdoc
 	 */
 	get destination() {
-		return 'database/migrations';
+		return 'database/seeds';
 	}
 
 	/**
