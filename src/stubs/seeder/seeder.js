@@ -67,8 +67,10 @@ module.exports = class Seeder extends Stub {
 	 * @inheritdoc
 	 */
 	get fileName() {
-		return ((parseDate(new Date) + '_') + this.realClassName.replace(/([A-Z])/g, '_$1').trim().toLowerCase())
+		const name = (this.realClassName.replace(/([A-Z])/g, '_$1').trim().toLowerCase())
 			.replace('-_', '-')
 			.replace(/^\_+/, '') + '.js';
+
+		return (parseDate(new Date) + '_') + (name.startsWith('_') ? name.substr(1) : name);
 	}
 }
