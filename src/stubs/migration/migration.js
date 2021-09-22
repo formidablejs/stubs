@@ -1,4 +1,5 @@
 const Stub = require('../../Stub');
+const path = require('path');
 
 /**
  * @param {String} str
@@ -43,8 +44,19 @@ module.exports = class Migration extends Stub {
 			table: {
 				type: String,
 				required: true,
-			}
+			},
+			alter: {
+				type: Boolean,
+				default: false,
+			},
 		};
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	get stub() {
+		return path.join(__dirname, (this.options.alter ? 'alter-stub' : 'stub'));
 	}
 
 	/**
