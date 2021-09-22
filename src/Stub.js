@@ -20,8 +20,8 @@ module.exports = class Stub {
 		this.className    = name;
 		this.options      = options;
 		this.stubName     = stubName;
-		this.stubPath     = path.join(__dirname, 'stubs', stubName, 'stub');
-		this.stubContents = fs.readFileSync(this.stubPath).toString();
+		this.stubPath     = null;
+		this.stubContents = null;
 
 		Object.keys(options).forEach((option) => {
 			if (this.props[option] === undefined) {
@@ -36,12 +36,21 @@ module.exports = class Stub {
 				}
 			}
 
-			if (this.props[option].type) {
+			if (this.props[option].type && options[option]) {
 				if (options[option].constructor !== this.props[option].type) {
 					throw new Error(`Invalid prop type: ${option}`);
 				}
 			}
 		});
+	}
+
+	/**
+	 * Get stub location.
+	 *
+	 * @returns {String}
+	 */
+	get stub() {
+		return path.join(__dirname, 'stubs', this.stubName, 'stub');
 	}
 
 	/**
@@ -62,6 +71,9 @@ module.exports = class Stub {
 	 * @returns {string}
 	 */
 	get contents() {
+		this.stubPath     = this.stub;
+		this.stubContents = fs.readFileSync(this.stubPath).toString();
+
 		Object.keys(this.data).forEach((key) => {
 			this.stubContents = this.stubContents.replaceAll(`{{${key}}}`, this.data[key]);
 		});
