@@ -1,0 +1,11 @@
+exports.up = (knex) => {
+	return knex.schema.table('{{table}}', (table) => {
+
+	});
+};
+
+exports.down = (knex) => {
+	return knex.schema.table('{{table}}', (table) => {
+
+	});
+};
