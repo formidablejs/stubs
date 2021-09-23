@@ -75,7 +75,7 @@ module.exports = class Stub {
 		this.stubContents = fs.readFileSync(this.stubPath).toString();
 
 		Object.keys(this.data).forEach((key) => {
-			this.stubContents = this.stubContents.replaceAll(`{{${key}}}`, this.data[key]);
+			this.stubContents = this.stubContents.replace(new RegExp(`{{${key}}}`, 'g'), this.data[key]);
 		});
 
 		return this.stubContents;
