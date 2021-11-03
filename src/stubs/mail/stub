@@ -1,6 +1,6 @@
 import { Mailable } from '@formidablejs/framework'
 
-export default class {{class}} < Mailable
+export class {{class}} < Mailable
 
 	prop subject\String
 
