@@ -15,8 +15,14 @@ declare class Stub {
     className: string;
     options: any;
     stubName: string;
-    stubPath: any;
+    stubPath: string;
     stubContents: any;
+    /**
+     * Get stub location.
+     *
+     * @returns {String}
+     */
+    get stub(): string;
     /**
      * Stub data.
      *
