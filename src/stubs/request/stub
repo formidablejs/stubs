@@ -1,6 +1,6 @@
-import { FormRequest } from '@formidablejs/framework'
+import { Request } from '@formidablejs/framework'
 
-export class {{class}} < FormRequest
+export class {{class}} < Request
 
 	def authorize
 		false
