@@ -26,7 +26,7 @@ module.exports = class Command extends Stub {
 		return pluralize(this.realClassName)
 			.replace(/([A-Z])/g, ':$1')
 			.trim()
-			.replace(/^\_+/, '')
+			.replace(/^\:+/, '')
 			.toLowerCase();
 	}
 }
