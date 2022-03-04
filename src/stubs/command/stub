@@ -5,6 +5,9 @@ export class {{class}} < Command
 
 	get signature
 		'{{signature}}'
+
+	get description
+		'My command description'
 	
 	get props
 		{
