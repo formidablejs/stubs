@@ -1,5 +1,5 @@
 import { Command } from '@formidablejs/framework'
-import { Props } from '@formidablejs/framework'
+import { Prop } from '@formidablejs/framework'
 
 export class {{class}} < Command
 
