@@ -3,4 +3,4 @@ import { ServiceResolver } from '@formidablejs/framework'
 export class {{class}} < ServiceResolver
 
 	def boot
-		this
+		self

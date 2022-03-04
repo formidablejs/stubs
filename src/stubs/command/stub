@@ -1,0 +1,18 @@
+import { Command } from '@formidablejs/framework'
+import { Prop } from '@formidablejs/framework'
+
+export class {{class}} < Command
+
+	get signature
+		'{{signature}}'
+
+	get description
+		'My command description'
+	
+	get props
+		{
+
+		}
+	
+	def handle
+		self.write "<fg:green>Hello World</fg:green>"

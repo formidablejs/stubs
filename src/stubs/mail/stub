@@ -5,7 +5,7 @@ export class {{class}} < Mailable
 	prop subject\String
 
 	def constructor
-		super!
+		super()
 
 	def render
 		<p> "Hello World"

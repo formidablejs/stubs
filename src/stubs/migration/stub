@@ -1,7 +1,11 @@
+const { Knex } = require('knex');
+
+/** @param {Knex} knex */
 exports.up = (knex) => {
 	return knex.schema.createTable('{{table}}', (table) => {
 
 	});
 };
 
+/** @param {Knex} knex */
 exports.down = (knex) => knex.schema.dropTable('{{table}}');
