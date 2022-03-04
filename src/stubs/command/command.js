@@ -1,4 +1,3 @@
-const pluralize = require('pluralize');
 const Stub = require('../../Stub');
 
 module.exports = class Command extends Stub {
@@ -23,7 +22,7 @@ module.exports = class Command extends Stub {
 	 * Signature used by the command.
 	 */
 	get signature() {
-		return pluralize(this.realClassName)
+		return this.realClassName
 			.replace(/([A-Z])/g, ':$1')
 			.trim()
 			.replace(/^\:+/, '')
