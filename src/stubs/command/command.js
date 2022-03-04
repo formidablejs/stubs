@@ -1,3 +1,4 @@
+const pluralize = require('pluralize');
 const Stub = require('../../Stub');
 
 module.exports = class Command extends Stub {
