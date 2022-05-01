@@ -1,15 +1,15 @@
-const { Knex } = require('knex');
+const { Database } = require('@formidablejs/framework');
 
-/** @param {Knex} knex */
-exports.seed = function (knex) {
+/** @param {Database} DB */
+exports.seed = function (DB) {
 	// Deletes ALL existing entries
-	return knex('{{table}}').del()
+	return DB.table('{{table}}').del()
 		.then(function () {
 			// Inserts seed entries
-			return knex('{{table}}').insert([
-				{ id: 1, colName: 'rowValue1' },
-				{ id: 2, colName: 'rowValue2' },
-				{ id: 3, colName: 'rowValue3' }
+			return DB.table('{{table}}').insert([
+				{ colName: 'rowValue1' },
+				{ colName: 'rowValue2' },
+				{ colName: 'rowValue3' }
 			]);
 		});
 };
