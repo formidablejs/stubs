@@ -3,12 +3,12 @@ import { Prop } from '@formidablejs/framework';
 
 export class {{class}} extends Command
 {
-	get signature(): String
+	get signature(): string
 	{
 		return '{{signature}}';
 	}
 
-	get description(): String
+	get description(): string
 	{
 		return 'My command description';
 	}
