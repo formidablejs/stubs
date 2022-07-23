@@ -15,11 +15,13 @@ module.exports = class Stub {
 	 * @param {string} name
 	 * @param {object} options
 	 * @param {string} stubName
+	 * @param {string} language
 	 */
-	constructor(name, options, stubName) {
+	constructor(name, options, stubName, language = 'imba') {
 		this.className    = name;
 		this.options      = options;
 		this.stubName     = stubName;
+		this.language     = language;
 		this.stubPath     = null;
 		this.stubContents = null;
 
@@ -50,7 +52,15 @@ module.exports = class Stub {
 	 * @returns {String}
 	 */
 	get stub() {
-		return path.join(__dirname, 'stubs', this.stubName, 'stub');
+		const ext = this.language == 'imba'
+			? '' : (
+				this.language == 'typescript' ? '.ts' : ''
+			);
+
+		const file = path.join(__dirname, 'stubs', this.stubName, ('stub' + ext));
+		const fallback = path.join(__dirname, 'stubs', this.stubName, 'stub');
+
+		return fs.existsSync(file) ? file : fallback;
 	}
 
 	/**
@@ -96,7 +106,9 @@ module.exports = class Stub {
 	 * @returns {string}
 	 */
 	get fileName() {
-		return this.realClassName + '.imba';
+		const ext = this.stub.slice(-3) === '.ts' ? '.ts' : '.imba';
+
+		return this.realClassName + (ext);
 	}
 
 	/**
