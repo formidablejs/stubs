@@ -1,3 +1,3 @@
-export var Stub: {
-    new (name: string, options: any, stubName: string): import("./Stub");
+export const Stub: {
+    new (name: string, options: any, stubName: string, language?: string): import("./Stub");
 };
