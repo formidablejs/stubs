@@ -4,8 +4,9 @@ declare class Stub {
      * @param {string} name
      * @param {object} options
      * @param {string} stubName
+     * @param {string} language
      */
-    constructor(name: string, options: object, stubName: string);
+    constructor(name: string, options: object, stubName: string, language?: string);
     /**
      * Stub properties.
      *
@@ -15,6 +16,7 @@ declare class Stub {
     className: string;
     options: any;
     stubName: string;
+    language: string;
     stubPath: string;
     stubContents: any;
     /**
