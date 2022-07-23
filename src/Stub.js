@@ -106,7 +106,7 @@ module.exports = class Stub {
 	 * @returns {string}
 	 */
 	get fileName() {
-		const ext = this.stub.substring(-3) === '.ts' ? '.ts' : '.imba';
+		const ext = this.stub.slice(-3) === '.ts' ? '.ts' : '.imba';
 
 		return this.realClassName + (ext);
 	}
