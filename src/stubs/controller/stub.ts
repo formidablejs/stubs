@@ -1,7 +1,6 @@
 import { Request } from '@formidablejs/framework';
 import { Controller } from '{{namespace}}Controller';
 
-export class {{class}} extends Controller
-{
+export class {{class}} extends Controller {
 
 }
