@@ -1,0 +1,9 @@
+import { Request } from '@formidablejs/framework'
+import { Controller } from './Controller'
+import type { Response } from '@formidablejs/framework'
+
+export class {{class}} < Controller
+
+	# Handle the incoming request.
+	def __invoke request\Request
+		null
