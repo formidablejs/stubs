@@ -5,5 +5,7 @@ import type { Response } from '@formidablejs/framework'
 export class {{class}} < Controller
 
 	# Handle the incoming request.
+	#
+	# @return {Response}
 	def __invoke request\Request
 		null

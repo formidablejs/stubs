@@ -21,21 +21,24 @@ export class {{class}} extends Controller {
     /**
      * Display the specified resource.
      */
-    @use('param') show(id: number): Response {
+    @use('param')
+    show(id: number): Response {
         //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    @use('param') update(id: number, request: Request): Response {
+    @use('param')
+    update(id: number, request: Request): Response {
         //
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    @use('param') destroy(id: number): Response {
+    @use('param')
+    destroy(id: number): Response {
         //
     }
 }
