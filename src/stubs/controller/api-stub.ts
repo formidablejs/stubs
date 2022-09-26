@@ -1,6 +1,7 @@
-import { Request } from '@formidablejs/framework';
 import { Controller } from '{{namespace}}Controller';
-import { use } from '@formidablejs/ts-ports'
+import { {{storeRequestClass}} } from '{{requestNamespace}}{{storeRequest}}';
+import { {{updateRequestClass}} } from '{{requestNamespace}}{{updateRequest}}';
+import { use } from '@formidablejs/ts-ports';
 import type { Response } from '@formidablejs/framework';
 
 export class {{class}} extends Controller {
@@ -14,7 +15,8 @@ export class {{class}} extends Controller {
     /**
      * Store a newly created resource in storage.
      */
-    store(request: Request): Response {
+    @use({{storeRequestClass}})
+    store(request: {{storeRequestClass}}): Response {
         //
     }
 
@@ -29,8 +31,8 @@ export class {{class}} extends Controller {
     /**
      * Update the specified resource in storage.
      */
-    @use('param')
-    update(id: number, request: Request): Response {
+    @use('param', {{updateRequestClass}})
+    update(id: number, request: {{updateRequestClass}}): Response {
         //
     }
 
