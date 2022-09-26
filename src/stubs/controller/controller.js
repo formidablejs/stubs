@@ -19,7 +19,67 @@ module.exports = class Controller extends Stub {
 				type: Boolean,
 				default: false,
 			},
+			"store-request": {
+				type: String,
+			},
+			"update-request": {
+				type: String,
+			}
 		};
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	 get data() {
+		return {
+			'class': this.realClassName,
+			'namespace': this.realPath,
+			'requestNamespace': this.requestNamespace,
+			'storeRequest': this.options["store-request"],
+			'storeRequestClass': this.storeRequestClass,
+			'updateRequest': this.options["update-request"],
+			'updateRequestClass': this.updateRequestClass,
+		};
+	}
+
+	/**
+	 * Store Request class.
+	 *
+	 * @returns {string}
+	 */
+	get storeRequestClass() {
+		return this.options["store-request"].split('/').pop();
+	}
+
+	/**
+	 * Store Request class.
+	 *
+	 * @returns {string}
+	 */
+	 get updateRequestClass() {
+		return this.options["update-request"].split('/').pop();
+	}
+
+	/**
+	 * Real path.
+	 *
+	 * @returns {string}
+	 */
+	 get requestNamespace() {
+		const paths = this.className.split('/');
+
+		paths.pop();
+
+		let realPath = '../';
+
+		paths.forEach((path) => {
+			realPath = realPath + '../';
+		});
+
+		realPath = realPath + 'Request/'
+
+		return realPath;
 	}
 
 	/**
