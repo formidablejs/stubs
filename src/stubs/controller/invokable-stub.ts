@@ -1,6 +1,6 @@
-import { Request } from '@formidablejs/framework';
-import { Controller } from '{{namespace}}Controller';
-import type { Response } from '@formidablejs/framework';
+import { Request } from '@formidablejs/framework'
+import { Controller } from '{{namespace}}Controller'
+import type { Response } from '@formidablejs/framework'
 
 export class {{class}} extends Controller {
     /**

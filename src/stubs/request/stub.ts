@@ -1,13 +1,13 @@
-import { Request } from '@formidablejs/framework';
+import { Request } from '@formidablejs/framework'
 
 export class {{class}} extends Request {
 	authorize(): Boolean {
-		return false;
+		return false
 	}
 
 	rules(): Object {
 		return {
 
-		};
+		}
 	}
 }

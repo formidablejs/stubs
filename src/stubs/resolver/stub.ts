@@ -1,7 +1,7 @@
-import { ServiceResolver } from '@formidablejs/framework';
+import { ServiceResolver } from '@formidablejs/framework'
 
 export class {{class}} extends ServiceResolver {
 	boot(): {{class}} {
-		return this;
+		return this
 	}
 }
