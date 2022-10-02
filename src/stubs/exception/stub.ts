@@ -1,4 +1,4 @@
-import { ApplicationException } from '@formidablejs/framework';
+import { ApplicationException } from '@formidablejs/framework'
 
 export class {{class}} extends ApplicationException {
 
