@@ -1,0 +1,17 @@
+import { config } from '@formidablejs/framework/lib/Support/Helpers'
+import { View } from '@formidablejs/framework'
+
+export class {{class}} < View
+
+	def render
+		const locale = get('locale', config('app.locale', new String)).replace(/_/g, '-')
+
+		<html lang=locale>
+			<head>
+				<meta charset='utf-8'>
+				<meta name='viewport' content='width=device-width,initial-scale=1'>
+				<title> "{{class}}"
+
+				<style src="*">
+
+			<body>
