@@ -1,6 +1,6 @@
 {
 	"name": "@formidablejs/stubs",
-	"version": "0.2.12",
+	"version": "0.2.13",
 	"description": "Formidable Framework stubs for Craftsman",
 	"main": "src/index.js",
 	"types": "types/index.d.ts",
