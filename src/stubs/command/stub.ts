@@ -10,7 +10,7 @@ export class {{class}} extends Command {
 		return 'My command description'
 	}
 
-	get props(): Object {
+	get props(): object {
 		return {
 
 		}

@@ -1,11 +1,11 @@
 import { Request } from '@formidablejs/framework'
 
 export class {{class}} extends Request {
-	authorize(): Boolean {
+	authorize(): boolean {
 		return false
 	}
 
-	rules(): Object {
+	rules(): object {
 		return {
 
 		}
