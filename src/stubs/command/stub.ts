@@ -16,7 +16,9 @@ export class {{class}} extends Command {
 		}
 	}
 
-	handle(): any {
-		return this.write("<fg:green>Hello World</fg:green>")
+	handle(): void {
+		this.write("<fg:green>Hello World</fg:green>")
+
+		this.exit()
 	}
 }

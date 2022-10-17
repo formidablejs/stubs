@@ -1,0 +1,6 @@
+import { Repository } from '@formidablejs/framework'
+
+export class {{class}} < Repository
+
+	static get context
+		'{{class}}'
