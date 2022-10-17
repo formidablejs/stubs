@@ -8,11 +8,13 @@ export class {{class}} < Command
 
 	get description
 		'My command description'
-	
+
 	get props
 		{
 
 		}
-	
+
 	def handle
 		self.write "<fg:green>Hello World</fg:green>"
+
+		self.exit!
