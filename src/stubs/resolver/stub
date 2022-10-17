@@ -2,5 +2,10 @@ import { ServiceResolver } from '@formidablejs/framework'
 
 export class {{class}} < ServiceResolver
 
+	get context
+		[
+			#
+		]
+
 	def boot
 		self
