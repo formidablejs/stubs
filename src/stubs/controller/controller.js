@@ -77,7 +77,7 @@ module.exports = class Controller extends Stub {
 			realPath = realPath + '../';
 		});
 
-		realPath = realPath + 'Request/'
+		realPath = realPath + 'Requests/'
 
 		return realPath;
 	}

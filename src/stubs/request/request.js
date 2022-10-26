@@ -5,6 +5,6 @@ module.exports = class Request extends Stub {
 	 * @inheritdoc
 	 */
 	get destination() {
-		return 'app/Http/Request';
+		return 'app/Http/Requests';
 	}
 }
