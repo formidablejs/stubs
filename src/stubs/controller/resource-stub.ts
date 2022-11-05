@@ -1,7 +1,7 @@
 import { Controller } from '{{namespace}}Controller'
 import { {{storeRequestClass}} } from '{{requestNamespace}}{{storeRequest}}'
 import { {{updateRequestClass}} } from '{{requestNamespace}}{{updateRequest}}'
-import { use } from '@formidablejs/ts-ports'
+import { use } from '@formidablejs/framework'
 import type { Response } from '@formidablejs/framework'
 
 export class {{class}} extends Controller {
