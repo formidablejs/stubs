@@ -1,0 +1,4 @@
+export tag {{class}}
+
+	def render
+		<self>
