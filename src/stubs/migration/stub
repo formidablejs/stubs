@@ -3,7 +3,7 @@ const { Database } = require('@formidablejs/framework');
 /** @param {Database} DB */
 exports.up = (DB) => {
 	return DB.schema.createTable('{{table}}', (table) => {
-
+{{schema}}
 	});
 };
 
