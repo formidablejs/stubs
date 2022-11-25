@@ -29,6 +29,6 @@ module.exports = class Tag extends Stub {
 	 * @inheritdoc
 	 */
 	get destination() {
-		return 'resources/imba';
+		return 'resources/frontend';
 	}
 }
