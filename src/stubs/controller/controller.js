@@ -24,6 +24,10 @@ module.exports = class Controller extends Stub {
 			},
 			"update-request": {
 				type: String,
+			},
+			domain: {
+				type: String,
+				required: false
 			}
 		};
 	}
@@ -34,13 +38,33 @@ module.exports = class Controller extends Stub {
 	 get data() {
 		return {
 			'class': this.realClassName,
-			'namespace': this.realPath,
+			'namespace': this.classNamespace,
 			'requestNamespace': this.requestNamespace,
 			'storeRequest': this.options["store-request"],
 			'storeRequestClass': this.storeRequestClass,
 			'updateRequest': this.options["update-request"],
 			'updateRequestClass': this.updateRequestClass,
 		};
+	}
+
+	get classNamespace() {
+		if (this.options.domain) {
+			const paths = this.className.split('/');
+
+			paths.pop();
+
+			let realPath = '../../../';
+
+			paths.forEach((path) => {
+				realPath = realPath + '../';
+			});
+
+			realPath = realPath + 'Http/Controllers/'
+
+			return realPath;
+		}
+
+		return this.realPath;
 	}
 
 	/**
@@ -108,6 +132,10 @@ module.exports = class Controller extends Stub {
 	 * @inheritdoc
 	 */
 	get destination() {
+		if (this.options.domain) {
+			return `app/Domain/${this.options.domain}/Controllers`;
+		}
+
 		return 'app/Http/Controllers';
 	}
 }
