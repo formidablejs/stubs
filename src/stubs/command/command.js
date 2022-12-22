@@ -1,6 +1,18 @@
 const Stub = require('../../Stub');
 
 module.exports = class Command extends Stub {
+	/**
+	 * @inheritdoc
+	 */
+	get props() {
+		return {
+			domain: {
+				type: String,
+				required: false
+			}
+		};
+	}
+
     /**
 	 * @inheritdoc
 	 */
@@ -15,6 +27,10 @@ module.exports = class Command extends Stub {
 	 * @inheritdoc
 	 */
 	get destination() {
+		if (this.options.domain) {
+			return `app/Domain/${this.options.domain}/Commands`;
+		}
+
 		return 'app/Console/Commands';
 	}
 
