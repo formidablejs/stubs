@@ -5,7 +5,7 @@ export class {{class}} extends Request {
 		return false
 	}
 
-	rules(): object {
+	rules(): any {
 		return {
 
 		}

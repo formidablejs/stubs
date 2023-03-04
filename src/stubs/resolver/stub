@@ -2,7 +2,7 @@ import { ServiceResolver } from '@formidablejs/framework'
 
 export class {{class}} < ServiceResolver
 
-	get context
+	get context\Array<any>
 		[
 			#
 		]

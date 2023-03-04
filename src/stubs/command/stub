@@ -1,20 +1,21 @@
 import { Command } from '@formidablejs/framework'
 import { Prop } from '@formidablejs/framework'
+import type { PropList } from '@formidablejs/framework'
 
 export class {{class}} < Command
 
-	get signature
+	get signature\string
 		'{{signature}}'
 
-	get description
+	get description\string
 		'My command description'
 
-	get props
+	get props\PropList
 		{
 
 		}
 
-	def handle
+	def handle\never
 		self.write "<fg:green>Hello World</fg:green>"
 
 		self.exit!
