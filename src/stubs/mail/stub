@@ -2,7 +2,7 @@ import { Mailable } from '@formidablejs/framework'
 
 export class {{class}} < Mailable
 
-	prop subject\String
+	prop subject\string
 
 	def constructor
 		super()

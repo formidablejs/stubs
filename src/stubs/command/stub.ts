@@ -1,5 +1,6 @@
 import { Command } from '@formidablejs/framework'
 import { Prop } from '@formidablejs/framework'
+import type { PropList } from '@formidablejs/framework'
 
 export class {{class}} extends Command {
 	get signature(): string {
@@ -10,13 +11,13 @@ export class {{class}} extends Command {
 		return 'My command description'
 	}
 
-	get props(): object {
+	get props(): PropList {
 		return {
 
 		}
 	}
 
-	handle(): void {
+	handle(): never {
 		this.write("<fg:green>Hello World</fg:green>")
 
 		this.exit()
