@@ -4,7 +4,7 @@ export class {{class}} extends ServiceResolver {
 	/**
 	 * Context classes.
 	 */
-	get context(): Array<object> {
+	get context(): Array<any> {
 		return [
 			//
 		]

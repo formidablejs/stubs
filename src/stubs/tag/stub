@@ -1,4 +1,4 @@
 export tag {{class}}
 
-	def render
+	def render\{{class}}
 		<self>

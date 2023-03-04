@@ -2,10 +2,10 @@ import { Request } from '@formidablejs/framework'
 
 export class {{class}} < Request
 
-	def authorize
+	def authorize\boolean
 		false
 
-	def rules
+	def rules\any
 		{
 
 		}
