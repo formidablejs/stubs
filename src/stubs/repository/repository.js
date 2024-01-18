@@ -6,10 +6,25 @@ module.exports = class Repository extends Stub {
 	 */
 	get props() {
 		return {
+			table: {
+				type: String,
+				required: true
+			},
 			domain: {
 				type: String,
 				required: false
 			}
+		};
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	get data() {
+		return {
+			'class': this.realClassName,
+			'table': this.options['table'],
+			'namespace': this.realPath,
 		};
 	}
 
