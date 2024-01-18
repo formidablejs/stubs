@@ -2,5 +2,8 @@ import { Repository } from '@formidablejs/framework'
 
 export class {{class}} < Repository
 
+	get tableName
+		'{{table}}'
+
 	static get context\string
 		'{{class}}'
