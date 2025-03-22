@@ -1,0 +1,9 @@
+const { Factory } = require('@formidablejs/framework')
+
+exports.{{class}} = class {{class}} extends Factory {
+	async definition() {
+		return  {
+
+		}
+	}
+}
