@@ -60,7 +60,12 @@ module.exports = class Migration extends Stub {
 	 * @inheritdoc
 	 */
 	get stub() {
-		return path.join(__dirname, (this.options.alter ? 'alter-stub' : 'stub'));
+		const ext = this.language == 'imba'
+			? '' : (
+				this.language == 'typescript' ? '.ts' : ''
+			);
+
+		return path.join(__dirname, ((this.options.alter ? 'alter-stub' : 'stub') + ext));
 	}
 
 	/**
@@ -133,9 +138,14 @@ module.exports = class Migration extends Stub {
 	 * @inheritdoc
 	 */
 	get fileName() {
+		const ext = this.language == 'imba'
+			? '.js' : (
+				this.language == 'typescript' ? '.ts' : '.js'
+			);
+
 		const name = (this.realClassName.replace(/([A-Z])/g, '_$1').trim().toLowerCase())
 			.replace('-_', '-')
-			.replace(/^\_+/, '') + '.js';
+			.replace(/^\_+/, '') + ext;
 
 		return (parseDate(new Date) + '_') + (name.startsWith('_') ? name.substr(1) : name);
 	}
