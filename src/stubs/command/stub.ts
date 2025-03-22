@@ -1,5 +1,4 @@
-import { Command } from '@formidablejs/framework'
-import { Prop } from '@formidablejs/framework'
+import { Command, Prop } from '@formidablejs/framework'
 import type { PropList } from '@formidablejs/framework'
 
 export class {{class}} extends Command {

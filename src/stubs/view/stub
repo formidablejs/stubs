@@ -1,5 +1,4 @@
-import { config } from '@formidablejs/framework/lib/Support/Helpers'
-import { View } from '@formidablejs/framework'
+import { config, View } from '@formidablejs/framework'
 
 export class {{class}} < View
 
