@@ -1,38 +1,5 @@
+const path = require('path');
 const Stub = require('../../Stub');
-
-/**
- * @param {String} str
- * @param {String} padChar
- * @param {Number} totalLength
- * @returns {String} str
- */
-const lpad = (str, padChar, totalLength) => {
-	str = str.toString();
-	let neededPadding = totalLength - str.length;
-
-	for (let i = 0; i < neededPadding; i++) {
-		str = padChar + str;
-	}
-
-	return str;
-}
-
-/**
- * Create date stamp.
- *
- * @param {Date} date
- * @returns {String}
- */
-const parseDate = (date) => {
-	return [
-		date.getUTCFullYear(),
-		lpad(date.getUTCMonth() + 1, '0', 2),
-		lpad(date.getUTCDate(), '0', 2),
-		lpad(date.getUTCHours(), '0', 2),
-		lpad(date.getUTCMinutes(), '0', 2),
-		lpad(date.getUTCSeconds(), '0', 2)
-	].join('');
-}
 
 module.exports = class Seeder extends Stub {
 	/**
@@ -42,7 +9,7 @@ module.exports = class Seeder extends Stub {
 		return {
 			table: {
 				type: String,
-				required: true,
+				required: false,
 			}
 		};
 	}
@@ -60,17 +27,33 @@ module.exports = class Seeder extends Stub {
 	 * @inheritdoc
 	 */
 	get destination() {
-		return 'database/seeds';
+		return 'database/seeders';
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	get stub() {
+		const ext = this.language == 'imba'
+			? '' : (
+				this.language == 'typescript' ? '.ts' : ''
+			);
+
+		let stub = 'stub-no-table';
+
+		if (this.options.table) {
+			stub = 'stub';
+		}
+
+		return path.join(__dirname, (stub + ext));
 	}
 
 	/**
 	 * @inheritdoc
 	 */
 	get fileName() {
-		const name = (this.realClassName.replace(/([A-Z])/g, '_$1').trim().toLowerCase())
-			.replace('-_', '-')
-			.replace(/^\_+/, '') + '.js';
+		const ext = this.stub.slice(-3) === '.ts' ? '.ts' : '.js';
 
-		return (parseDate(new Date) + '_') + (name.startsWith('_') ? name.substr(1) : name);
+		return this.realClassName + (ext);
 	}
 }
